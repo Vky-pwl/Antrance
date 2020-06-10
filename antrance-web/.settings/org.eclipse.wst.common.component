@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="antrance-web">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
+        <dependent-module archiveName="antrance-admin-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-admin/antrance-admin">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-auth-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-auth/antrance-auth">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-cache-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-cache/antrance-cache">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-user-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-user/antrance-user">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-scheduler-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-scheduler/antrance-scheduler">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-dao-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-dao/antrance-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-common-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-common/antrance-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antrance-aop-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/antrance-aop/antrance-aop">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="antrance-web"/>
+        <property name="java-output-path" value="/antrance-web/target/classes"/>
+    </wb-module>
+</project-modules>

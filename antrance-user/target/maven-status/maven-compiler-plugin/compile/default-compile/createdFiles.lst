@@ -1,0 +1,6 @@
+com/icat/antrance/user/controller/CandidateLoginWithTinyLinkController.class
+com/icat/antrance/user/service/CandidateCompositeService.class
+com/icat/antrance/user/service/impl/CandidateLoginDetailServiceImpl.class
+com/icat/antrance/user/service/CandidateLoginDetailService.class
+com/icat/antrance/user/controller/CandidateExamController.class
+com/icat/antrance/user/service/impl/CandidateCompositeServiceImpl.class
