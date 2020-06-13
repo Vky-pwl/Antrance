@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"com.icat.quest"})
+@ComponentScan(basePackages= {"com.icat.antrance"})
 public class WebMvcConfig implements WebMvcConfigurer {
 
 	@Bean
