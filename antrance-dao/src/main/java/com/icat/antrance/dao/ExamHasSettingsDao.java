@@ -7,6 +7,6 @@ import com.icat.antrance.model.ExamHasSettings;
 
 public interface ExamHasSettingsDao extends GenericDao<ExamHasSettings,Integer>{
 	
-	public String findAll = "from com.icat.quest.model.ExamHasSettings examHasSettings where examHasSettings.active = true";
+	public String findAll = "from com.icat.antrance.model.ExamHasSettings examHasSettings where examHasSettings.active = true";
 
 }

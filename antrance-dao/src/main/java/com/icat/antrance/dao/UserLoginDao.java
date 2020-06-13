@@ -9,7 +9,7 @@ public interface UserLoginDao extends GenericDao<UserLogin, Integer> {
 
 	
 	
-		public static String findAllLogOffTimeNullByUserName= "from com.icat.quest.model.UserLogin userLogin\n" + 
+		public static String findAllLogOffTimeNullByUserName= "from com.icat.antrance.model.UserLogin userLogin\n" + 
 			"where userLogin.userId = :_1_userId and userLogin.userType=:_2_userType and userLogin.logoffTime is null order by id desc";
 
 	

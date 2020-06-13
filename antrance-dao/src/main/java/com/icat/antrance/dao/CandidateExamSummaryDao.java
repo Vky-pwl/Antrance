@@ -10,13 +10,13 @@ public interface CandidateExamSummaryDao extends GenericDao<CandidateExamSummary
 			"inner join ExamSection ES on ES.examSectionId = ESHQ.examSectionId\n" + 
 			"where ESHQ.examSectionHasQuestionId =:_1_examSectionHasQuestionId";
 
-	public static String findByTCHTCIdAndQuestionId = "from com.icat.quest.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.testConductorHasTestCodeId=:_1_TCHTCId and candidateExamSummary.examSectionHasQuestionId=:_2_questionId ";
-	public static String findByTCHTCID = "from com.icat.quest.model.CandidateExamSummary candidateExamSummary where " +
+	public static String findByTCHTCIdAndQuestionId = "from com.icat.antrance.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.testConductorHasTestCodeId=:_1_TCHTCId and candidateExamSummary.examSectionHasQuestionId=:_2_questionId ";
+	public static String findByTCHTCID = "from com.icat.antrance.model.CandidateExamSummary candidateExamSummary where " +
 			"candidateExamSummary.testConductorHasTestCodeId=:_1_TCHTCId and candidateExamSummary.active = true";
 	
-	public static String findAllByExamId = "from com.icat.quest.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.examId=:_2_examId and active = true";
+	public static String findAllByExamId = "from com.icat.antrance.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.examId=:_2_examId and active = true";
 	
-	public static String findAllByExamIdAndTCIds = "from com.icat.quest.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.examId=:_2_examId and testConductorHasTestCodeId in(:_1_TCHTCId) and active = true";
+	public static String findAllByExamIdAndTCIds = "from com.icat.antrance.model.CandidateExamSummary candidateExamSummary where candidateExamSummary.examId=:_2_examId and testConductorHasTestCodeId in(:_1_TCHTCId) and active = true";
 		
 	public  String findExamResultDescByExamIdAndCanId = "select distinct C.userId candidateId, C.firstName candidateFirstName, C.lastName candidateLastName, \n" + 
 			"E.examId, E.examName, E.questionCount totalQuestion, E.totalMarks, ES.examSectionId,  \n" + 

@@ -5,30 +5,30 @@ import com.icat.antrance.model.TestConductorHasTestCode;
 
 public interface TestConductorHasTestCodeDao extends GenericDao<TestConductorHasTestCode, Integer>{
 
-	public  String listByTestConductorLicenseId = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.testConductorLicense.testConductorLicenseId =:_1_testConductorLicenseId and testConductorHasTestCode.active= true order by testConductorHasTestCode.testConductorHasTestCodeId desc";
+	public  String listByTestConductorLicenseId = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.testConductorLicense.testConductorLicenseId =:_1_testConductorLicenseId and testConductorHasTestCode.active= true order by testConductorHasTestCode.testConductorHasTestCodeId desc";
 	public  String listUserIdByExamIdAndUserList = "select distinct userId from TestConductorHasTestCode where examId =:_1_examId and userId in(:_2_userIds) and status != 'COMPLETED'";
 	
-	public String findByUserIdAndExamId = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.user.userId = :_1_candidateId and testConductorHasTestCode.exam.examId = :_2_examId  and testConductorHasTestCode.attended = false";
+	public String findByUserIdAndExamId = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.user.userId = :_1_candidateId and testConductorHasTestCode.exam.examId = :_2_examId  and testConductorHasTestCode.attended = false";
 
-	public  String findById = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.testConductorHasTestCodeId =:_1_TCHTCID";
+	public  String findById = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.testConductorHasTestCodeId =:_1_TCHTCID";
 	
 	public  String findAllByUserIdAndExamId = "select questionMarks, answerFlag, questionNegativeMarks from CandidateExamSummary where candidateId = :_1_candidateId and examId=:_2_examId";
 
-	public  String listResultByExamId = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.exam.examId =:_1_examId and testConductorHasTestCode.active= true and testConductorHasTestCode.attended=true order by testConductorHasTestCode.testConductorHasTestCodeId desc";
+	public  String listResultByExamId = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.exam.examId =:_1_examId and testConductorHasTestCode.active= true and testConductorHasTestCode.attended=true order by testConductorHasTestCode.testConductorHasTestCodeId desc";
 	
-	public  String listExamByCandidateId = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true and testConductorHasTestCode.exam.publish=true order by testConductorHasTestCode.exam.examId desc";
+	public  String listExamByCandidateId = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true and testConductorHasTestCode.exam.publish=true order by testConductorHasTestCode.exam.examId desc";
 	
-	public  String listExamByCandidateIdByAttended = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.attended = :_2_attended and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true and testConductorHasTestCode.exam.publish=true order by testConductorHasTestCode.exam.examId desc";
+	public  String listExamByCandidateIdByAttended = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.attended = :_2_attended and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true and testConductorHasTestCode.exam.publish=true order by testConductorHasTestCode.exam.examId desc";
 
-	public String findAll = "from com.icat.quest.model.TestConductorHasTestCode  testConductorHasTestCode where testConductorHasTestCode.attended = true and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true ";
+	public String findAll = "from com.icat.antrance.model.TestConductorHasTestCode  testConductorHasTestCode where testConductorHasTestCode.attended = true and testConductorHasTestCode.active =true and testConductorHasTestCode.exam.active = true ";
 	
-	public String findAllByUrlKey = "from com.icat.quest.model.TestConductorHasTestCode  testConductorHasTestCode where testConductorHasTestCode.tinyKey = :_1_urlKey and testConductorHasTestCode.active =true ";
+	public String findAllByUrlKey = "from com.icat.antrance.model.TestConductorHasTestCode  testConductorHasTestCode where testConductorHasTestCode.tinyKey = :_1_urlKey and testConductorHasTestCode.active =true ";
 	
 	public String findAllIdAndAttendeByCandidateId = "select distinct testConductorHasTestCodeId, attended  from TestConductorHasTestCode where userId =:_1_candidateId and active = true";
 
 	public String updateRemainingTimeByUserIdAndExamId = "update TestConductorHasTestCode set remainingTime = :_1_remainingTime and sectionRemainingTime = :_4_sectionRemainingTime and currentSectionId=:_5_currentSectionId and currentQuestionId=:_6_questionId and currentQuestionStatus = 'COMPLETED' where examId = :_2_examId and userId = :_3_userId";
 	
-	public  String findByUserId = "from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.testConductorLicense.testConductor.testConductorId=:_2_testConductorId and testConductorHasTestCode.active= true";
+	public  String findByUserId = "from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode   where testConductorHasTestCode.user.userId =:_1_userId and testConductorHasTestCode.testConductorLicense.testConductor.testConductorId=:_2_testConductorId and testConductorHasTestCode.active= true";
 
 	public String findCurrentStatus = "select ES.examSectionId currentSectionId, ESHQ.examSectionHasQuestionId currentQuestionId, ES.durationInSeconds currentSectionRemaingTime\n" + 
 			"			from ExamSection ES, ExamSectionHasQuestion ESHQ where ES.examId=:_1_examId and ES.sequence=1 and ESHQ.questionNumber=1 and ESHQ.examSectionId = ES.examSectionId and ES.active = true and ESHQ.active = true";

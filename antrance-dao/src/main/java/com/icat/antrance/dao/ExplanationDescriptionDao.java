@@ -13,7 +13,7 @@ import com.icat.antrance.model.ExplanationDescription;
 public interface ExplanationDescriptionDao extends GenericDao<ExplanationDescription,Integer>{
 
 	
-	public String findAll = "from com.icat.quest.model.ExplanationDescription explanationDescription order by explanationDescription.explanationDescriptionId desc";
-	public String findAllByQuestionId = "from com.icat.quest.model.ExplanationDescription explanationDescription where explanationDescription.questionId=:_1_questionId";
+	public String findAll = "from com.icat.antrance.model.ExplanationDescription explanationDescription order by explanationDescription.explanationDescriptionId desc";
+	public String findAllByQuestionId = "from com.icat.antrance.model.ExplanationDescription explanationDescription where explanationDescription.questionId=:_1_questionId";
 		
 }

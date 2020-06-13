@@ -338,7 +338,7 @@ public class TestConductorHasTestCodeServiceImpl implements TestConductorHasTest
 	@Override
 	public void updateTestCodes() {
 		TinyLinkService tinyLinkService = (TinyLinkService) SpringApplicationContext.getBean("tinyLinkService");
-		List<TestConductorHasTestCode> testConductorHasTestCodes = testConductorHasTestCodeDao.listEntity("from com.icat.quest.model.TestConductorHasTestCode testConductorHasTestCode");
+		List<TestConductorHasTestCode> testConductorHasTestCodes = testConductorHasTestCodeDao.listEntity("from com.icat.antrance.model.TestConductorHasTestCode testConductorHasTestCode");
 		testConductorHasTestCodes.forEach(testConductorHasTestCode -> {
 			System.out.println("***");
 			String testCode = UniqueCodeGeneratorImpl.getExamCode(testConductorHasTestCode.getTestConductorLicense().getTestConductorLicenseId() + "",testConductorHasTestCode.getExam().getExamId() + "", testConductorHasTestCode.getTestConductorHasTestCodeId() + "");

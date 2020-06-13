@@ -15,7 +15,7 @@ public class AopListner {
 	@Autowired
 	private CandidateExamSummaryService candidateExamSummaryService;
 	
-	@After("(execution(* com.icat.quest.dao.user.service.CandidateExamService.createCandidateExam(..)) && args(candidateExamVo,..))")
+	@After("(execution(* com.icat.antrance.dao.user.service.CandidateExamService.createCandidateExam(..)) && args(candidateExamVo,..))")
 	 public void runAfterCreateCandidateExam( CandidateExamVo candidateExamVo) throws Throwable {
 	
 		candidateExamSummaryService.saveUpdateCandidateExamSummary(candidateExamVo);

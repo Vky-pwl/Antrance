@@ -9,11 +9,11 @@ import com.icat.antrance.model.QuestionBank;
 
 public interface QuestionBankDao extends GenericDao<QuestionBank,Integer>{
 
-	public String findAllBySearchKeyWithFilter="from com.icat.quest.model.QuestionBank questionBank where "
+	public String findAllBySearchKeyWithFilter="from com.icat.antrance.model.QuestionBank questionBank where "
 			+ "questionBank.active =:_1_active and questionBank.questionStatment like :_2_questionBankName order by questionBank.questionId desc";
-	public String findAllByFilter="from com.icat.quest.model.QuestionBank questionBank where questionBank.active =:_1_active order by questionBank.questionId desc";
-	public String findAllBySearchKey="from com.icat.quest.model.QuestionBank questionBank where questionBank.questionStatment like :_2_questionBankName order by questionBank.questionId desc";
-	public String findAll = "from com.icat.quest.model.QuestionBank questionBank order by questionBank.questionId desc";
+	public String findAllByFilter="from com.icat.antrance.model.QuestionBank questionBank where questionBank.active =:_1_active order by questionBank.questionId desc";
+	public String findAllBySearchKey="from com.icat.antrance.model.QuestionBank questionBank where questionBank.questionStatment like :_2_questionBankName order by questionBank.questionId desc";
+	public String findAll = "from com.icat.antrance.model.QuestionBank questionBank order by questionBank.questionId desc";
 	
 	public String findByFilterCriteria = "SELECT DISTINCT questionId FROM QuestionBank Q, QuestionCategory QC" + 
 			" WHERE Q.questionCategoryId = QC.questionCategoryId " + 
